@@ -31,3 +31,22 @@ print(result == 0) #True  - numerical value
 print(not result)  # True - falsy in boolean context
 print(result is None) #False - since it's a different object
 print(result is False) #False - defferent types
+
+
+#multiple returns - python packs multiple returns into a tuple
+def claculate_room(length, width):
+    area = length*width 
+    perimeter = 2*(length+width)
+    return area, perimeter  #turns into a tuple (area, perimeter)
+result = claculate_room(10,5)
+print(result)
+print(type(result))
+
+no_parenthesis = 1,2,3 #still a tuple
+
+#unpacking tuple
+area, perimeter = claculate_room(10,5)
+print('area:' , area)
+print('perimeter:' , perimeter)
+
+
